@@ -1,9 +1,9 @@
 <?php
+
     require_once "controllers/get.controller.php";
     require_once "models/get.model.php";
     require_once "models/connection.php";
     
-    # ESTA ES LA VISTA
     # Set the select variables. if there is not a select variable defined at the url, select will habe the default value. * :
     $select = $_GET["select"] ??  "*";
     $orderBy = $_GET["orderBy"] ??  null; 
@@ -16,7 +16,6 @@
     # When these values are not sent in the request when selecting ranges they are equal to null
     $filterTo = $_GET["filterTo"] ?? null;
     $inTo = $_GET["inTo"] ?? null;
-
     
     $response = new GetController();
 
@@ -68,4 +67,5 @@
         # Get request without filter
         $response -> getData($table, $select, $orderBy, $orderMode, $startAt, $endAt);
     }
+    
 ?>

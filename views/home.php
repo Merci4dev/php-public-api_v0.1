@@ -7,7 +7,7 @@
         <div
             class="h-100 p-5 text-white bg-primary border rounded-3">
             <h2>PHP Public Api v0.1</h2>
-            <p>This A PHP public API that uses a MySQL database is a software system that allows external developers or users to access and interact with data stored in a MySQL database using HTTP requests. </p>
+            <p>This is a PHP public API that uses a MySQL database als software system that allows external developers or users to access and interact with data stored in a MySQL database using HTTP requests. </p>
 
             <p> This API <i class="fas fa-warehouse    "></i> built using PHP programming language, which is a server-side language that is commonly used for web development. The API exposes a set of endpoints, which are URLs that can be accessed by other applications to retrieve or manipulate data. </p>
 

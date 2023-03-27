@@ -1,4 +1,5 @@
 <?php
+
     require_once "models/connection.php";
 
     class PostModel{
@@ -32,23 +33,6 @@
             foreach ($data as $key => $value) {
                 $stmt->bindParam(":".$key, $data[$key], PDO::PARAM_STR);                  
             }
-            
-            
-            // try {
-                
-                //     $stmt->execute();
-                
-                //     $respose = array(
-
-                    //         "LastId" => $link->lastInsertId(),
-                    //         "Comment" => "The proccess was Successfully"
-                    //     );
-                    //     return $respose;
-                    
-                    // } catch (PDOException $e) {
-                        //     echo "RelData: Error: " . $e->getMessage();
-                        // }
-                        
                         
             # if all goes well execute the statement
             #===============================================

@@ -116,8 +116,6 @@
                     $crypt2 = crypt($data["confirm_password_".$suffix], '$2a$07$usesomesillystringforsmxz$');
                 
                     # Comparing the encrypted passwd in the db with the one we are passing to it
-                        // if(strcmp($response[0]["password_".$suffix], $crypt) == 0 && strcmp($response[0]["confirm_password_".$suffix], $crypt2) == 0) {}
-                        
                         if($response[0]["password_".$suffix]  && $response[0]["confirm_password_".$suffix]  ){
                          
                         # If everything goes well, we create the security token
@@ -161,12 +159,9 @@
                         $return->fncResponse($response, "Wrong Password",$suffix,);
                       $return = Connection::close($return);
                     }
-                    // echo '<pre>'; print_r($response); echo '</pre>';
-                    // return ;
                 }else{
                     # ==============================================
                     # But if the value of the passwd in the DB is null, we update the user token again for users who are logged in from external applications
-
                     $token = Connection::jwt($response[0]["id_".$suffix], $response[0]["email_".$suffix]);
                 
                     $key = "myPrivateKeybxe_234w";
@@ -219,14 +214,6 @@
             }
             else{
 
-                // if($error != null){
-                //     $json = array(
-                //         'status' => 400,
-                //         'result' => $error,
-                //     );
-
-                // }else{
-
                 $json = array(
                     'status' => 404,
                     'result' => 'Not Found',
@@ -238,5 +225,4 @@
         }
     }
 
-    // wget -r -np -nc -q -T 5 -c --no-check-certificate --random-wait https://www.justwatch.com/
 ?>

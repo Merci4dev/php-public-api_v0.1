@@ -3,13 +3,8 @@
     require_once "models/connection.php";
     require_once "controllers/post.controller.php";
 
-
     if(isset($_POST)){
-    
-
-        #1 validar aqui lo que viene del cliente 
-        // $validar = $_POST['tittle_course'] ;
-
+       
         # Detecting the columns. Para determimar que coinciden con las columnas de la db 
         # Separate the properties that come into the post variable in an array
         # para separar los nombres de las propiedades del arreglo
@@ -33,7 +28,6 @@
             echo json_encode($json, http_response_code($json['status']));
             return;
         }
-
             
         # Post controller instance to create a data in eny table
         $response = new PostController();
@@ -64,9 +58,7 @@
             # [x] post request for authorized users
             # ======================================================
             if(isset($_GET["token"])){
-                
-                // $tableToken =   $_GET["table"] ?? "users";
-                // $suffix =   $_GET["suffix"] ?? "user";
+           
                 $tableToken =   $_GET["table"] ?? null;
                 $suffix =   $_GET["suffix"] ??  null;
                 

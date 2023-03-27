@@ -14,4 +14,5 @@
 
     $index = new RoutesController();
     $index->index();
+    
 ?>

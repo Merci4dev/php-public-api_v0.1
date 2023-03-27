@@ -29,12 +29,6 @@
 
         # GET Method 
         if($request_mathod == "GET"){
-            # Include the get.php content in the main path
-            // $json = array(
-            //     'status' => 200,
-            //     'results' => 'GET Request'
-            // );
-            // echo json_encode($json, http_response_code($json['status']));
             
             include "services/get.php";
         }

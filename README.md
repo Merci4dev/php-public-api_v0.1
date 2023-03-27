@@ -3,6 +3,8 @@
 
     We use JWT authentication to authenticate the user and validate the user request.
 
+    For the optimal implementation layer from this API we use the [ MVC ] architecture model. 
+
     PHP 8.2.2 version
         
 
@@ -25,6 +27,5 @@
     6 Set Domain you prefer a the postman environment variable
 
     Note: In the api code we don't use validation for data form inputs. This es just a basic prototype.
-
 
 

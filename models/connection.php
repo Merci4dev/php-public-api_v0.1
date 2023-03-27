@@ -1,5 +1,4 @@
 <?php
-//   declare(strict_types=1);
 
     # Setting the  enviroment variable
     require __DIR__.'/../vendor/autoload.php';
@@ -99,6 +98,7 @@
                 
                 // echo '<pre>'; print_r($columns); echo '</pre>';
                 foreach ($validate as $key => $value) {
+
                     # Incrementando los numero de indeices que trae columna
                     $sum += in_array($value->item, $columns);
                 }
@@ -157,22 +157,6 @@
                 return "not-auth";
             }
         }
-
-        # API KEY
-        #============================================
-        // static public function apikey(){
-        //     return "79&GxwRJ-w;XPu2X!=zE%geJuA&c:PA2LFC+fErgR=St&TCyb";
-        // }
-        
-        # Public access to certain tables is not required API KEY
-        #============================================
-        // static public function publicAccess(){
-            
-        //     # Indicando la tablas que serean publicas
-        //     $tables = ["courses"];
-
-        //     return $tables;
-        // }
     }
     
 ?>

@@ -29,10 +29,6 @@
         static public function getData($table, $select, $orderBy, $orderMode, $startAt, $endAt){
             # instance from the GetModel class and access to the getData method
             $response = GetModel::getData($table, $select, $orderBy, $orderMode,$startAt, $endAt);
-            // echo '<pre>'; print_r($response ); echo '</pre>';
-            // return;
-
-        
             
             # controller response
             $return = new GetController();
@@ -112,8 +108,6 @@
             try {
                 # intancies from the GetModel class and access to the getData method
                 $response = GetModel::getDataSearch($table, $select, $linkTo, $search, $orderBy, $orderMode , $startAt, $endAt);
-                // echo '<pre>'; print_r($response ); echo '</pre>';
-                // return;
 
                 # controller response
                 $return = new GetController();
@@ -131,8 +125,6 @@
             try {
                 # intancies from the GetModel class and access to the getData method
                 $response = GetModel::getRelDataSearch($rel, $type, $select,  $linkTo, $search, $orderBy, $orderMode, $startAt, $endAt);
-                // echo '<pre>'; print_r($response); echo '</pre>';
-                // return;
 
                 # controller response
                 $return = new GetController();
@@ -168,8 +160,6 @@
             try {
                 # intancies from the GetModel class and access to the getData method
                 $response = GetModel::getRelDataRange($rel, $type, $select, $linkTo, $between1, $between2, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo);
-                // echo '<pre>'; print_r($response); echo '</pre>';
-                // return;
 
                 # controller response
                 $return = new GetController();

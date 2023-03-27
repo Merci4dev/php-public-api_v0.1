@@ -1,4 +1,5 @@
 <?php
+
     require_once "connection.php";
     require_once "get.model.php";
 
@@ -13,11 +14,7 @@
           
             // echo '<pre>'; print_r($respose); echo '</pre>';
             if(empty($respose)){
-                // $respose = array(
-                //     "Comment" => "The id was not found"
-                // );
-                // return $respose;
-                # O
+            
                 return null;
             }
 
@@ -53,23 +50,9 @@
                 return $respose;
 
             }else{
+            
                 # If there is an error
                 return $link->errorInfo();
-
-            // try {
-
-            //     $stmt->execute();
-                
-            //     $respose = array(
-
-            //         "LastId" => $link->lastInsertId(),
-            //         "Comment" => "Data Insert Successfully"
-            //     );
-            //     return $respose;
-
-            // } catch (PDOException $e) {
-            //     echo "RelData: Error: " . $e->getMessage();
-            // }
 
            }
 

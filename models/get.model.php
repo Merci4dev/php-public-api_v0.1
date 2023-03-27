@@ -60,8 +60,7 @@
             # Divede all coma finded values from in de linkTo selectvariable. linkToArray represent the column names
             $linkToArray = explode(",", $linkTo);
             $selectArray = explode(",", $select);
-            // $selectArray = explode(",", $equalTo);
-            // $validate = Connection::getColumnsData($table, $selectArray );
+         
             
             #With the array_push method we insert the linktToArray indices inside selectToArray dynamically
             foreach ($linkToArray as $key => $value) {
@@ -71,11 +70,6 @@
             # to remove duplicate indexes if they exist
             $selectArray = array_unique($selectArray);
          
-
-            // if(empty( $validate )){
-            //     return null;
-            // }
-
             #===================================================
             # Validation of existence of the table and columns
             // $selectArray = explode(",", $select);
@@ -85,12 +79,6 @@
                 
                 return null;
             } 
-
-            // foreach ($linkToArray as $key => $value) {
-            //     array_push($selectArray, $value);
-            // }
-            
-            // $response = GetModel::getDataFilter($table, $select,$linkTo,$equalsTo );
 
             $linkToArray = explode(",", $linkTo);
             $equalToArray = explode(",", $equalTo);
@@ -143,19 +131,8 @@
                 $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode";
             }              
 
-            // Para cuando estamo ordenando los datos y tambien limitando
-            // if($orderBy != null && $orderMode != null && $startAt != null && $endAt != null){
-            //     $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode LIMIT $startAt, $endAt ";
-            //     $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode LIMIT $startAt, $endAt ";
-            // }
-            
-            // Para cuando estamo limitando las consultas pero no ordenandolas
-            // if($orderBy == null && $orderMode == null && $startAt != null && $endAt != null){
-            //     $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText LIMIT $startAt, $endAt ";
-            // }
 
             $stmt = Connection::connect()->prepare($sql);
-          
 
             # binding the parameters
             foreach ($linkToArray as $key => $value) {
