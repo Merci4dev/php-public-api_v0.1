@@ -22,7 +22,7 @@
     4 Set the vendor directory to usr jwt and the environment variable with:
         composer require firebase/php-jwt 
 
-    5 Export the posmap file to test de different endpoints
+    5 Export the postman files which are in [ views/static/assets/postman ] to test de different endpoints
 
     6 Set Domain you prefer a the postman environment variable
 
